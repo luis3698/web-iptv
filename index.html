@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IPTV System — Reproductor para Windows, Android y Google TV</title>
+<meta name="description" content="Reproductor IPTV para Windows con mando a distancia Android y aplicación para televisores con Google TV. Listas M3U, Xtream Codes y guía XMLTV. Descarga directa.">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0d1117">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="IPTV System — Reproductor para Windows, Android y Google TV">
+<meta property="og:description" content="Listas M3U, Xtream Codes y guía XMLTV en el ordenador, en el móvil y en el televisor.">
+<meta property="og:image" content="assets/img/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="assets/img/favicon-64.png" sizes="64x64">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<!-- ====================================================== cabecera ====== -->
+<header class="header">
+  <div class="container header__inner">
+    <a class="brand" href="#top">
+      <img class="brand__mark" src="assets/img/app-icon.png" alt="">
+      <span class="brand__name">IPTV System</span>
+    </a>
+    <nav class="nav">
+      <a href="#sistema" data-i18n="nav.system">El sistema</a>
+      <a href="#tv" data-i18n="nav.tv">Google TV</a>
+      <a href="#descargas" data-i18n="nav.downloads">Descargas</a>
+      <a href="#instalacion" data-i18n="nav.install">Instalación</a>
+      <a href="#faq" data-i18n="nav.faq">Preguntas</a>
+    </nav>
+    <div class="header__actions">
+      <div class="lang" role="group" aria-label="Idioma / Language">
+        <button type="button" data-lang="es" aria-pressed="true">ES</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+      <a class="btn btn--primary btn--sm" href="#descargas" data-i18n="cta.download">Descargar</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ========================================================== hero ====== -->
+<section class="hero">
+  <div class="container hero__grid">
+    <div>
+      <span class="eyebrow" data-i18n="hero.eyebrow">Versión 1.0.0 · Windows · Android · Google TV</span>
+      <h1 data-i18n-html="hero.title">Tus listas IPTV, en el <span class="accent">ordenador</span>, en el <span class="accent">móvil</span> y en el <span class="accent">televisor</span>.</h1>
+      <p class="lead" data-i18n="hero.lead">Un reproductor que entiende listas M3U, cuentas Xtream Codes y guías XMLTV. Detecta solo lo que le pegas, se controla desde el móvil por Wi-Fi y ahora también se instala en tu Google TV.</p>
+
+      <div class="hero__cta">
+        <a class="btn btn--primary" href="downloads/IPTV-Desktop-Setup-1.0.0.exe" download>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 5.6l7.6-1.05v7.3H3zM3 18.4l7.6 1.05v-7.2H3zm8.6 1.19L21 21V12.85h-9.4zM11.6 4.4v7.45H21V3z"/></svg>
+          <span data-i18n="cta.windows">Windows</span>
+          <span class="btn__meta">.exe · 59,2 MB</span>
+        </a>
+        <a class="btn btn--ghost" href="downloads/IPTV-TV-1.0.0.apk" download>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21 3H3a2 2 0 00-2 2v11a2 2 0 002 2h6v2H7v2h10v-2h-2v-2h6a2 2 0 002-2V5a2 2 0 00-2-2zm0 13H3V5h18z"/></svg>
+          <span data-i18n="cta.tv">Google TV</span>
+          <span class="btn__meta">.apk · 3,5 MB</span>
+        </a>
+        <a class="btn btn--ghost" href="downloads/IPTV-Remote-1.0.0.apk" download>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17 1.01L7 1a2 2 0 00-2 2v18a2 2 0 002 2h10a2 2 0 002-2V3a2 2 0 00-2-1.99zM17 19H7V5h10z"/></svg>
+          <span data-i18n="cta.mobile">Mando Android</span>
+          <span class="btn__meta">.apk · 23,9 MB</span>
+        </a>
+      </div>
+
+      <p class="hero__note" data-i18n="hero.note">Descarga directa, sin registro y sin telemetría. Es un reproductor: no incluye ni distribuye ningún contenido.</p>
+
+      <div class="stats">
+        <div class="stat">
+          <div class="stat__value">3</div>
+          <div class="stat__label" data-i18n="stats.apps">aplicaciones, un solo sistema</div>
+        </div>
+        <div class="stat">
+          <div class="stat__value">M3U · Xtream · XMLTV</div>
+          <div class="stat__label" data-i18n="stats.formats">formatos reconocidos solos</div>
+        </div>
+        <div class="stat">
+          <div class="stat__value">ES / EN</div>
+          <div class="stat__label" data-i18n="stats.langs">idioma cambiable en caliente</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ilustración del reproductor de escritorio -->
+    <div class="mock reveal">
+      <div class="mock__bar">
+        <span class="mock__dot"></span><span class="mock__dot"></span><span class="mock__dot"></span>
+        <span class="mock__title">IPTV Desktop</span>
+      </div>
+      <div class="mock__body">
+        <svg viewBox="0 0 640 380" role="img" aria-label="Interfaz del reproductor de escritorio">
+          <rect width="640" height="380" fill="#0a0d12"/>
+          <!-- panel de canales -->
+          <rect x="0" y="0" width="196" height="380" fill="#161b22"/>
+          <rect x="14" y="16" width="168" height="26" rx="6" fill="#1c232d"/>
+          <rect x="24" y="26" width="86" height="7" rx="3.5" fill="#39414d"/>
+          <g fill="#1c232d">
+            <rect x="14" y="56" width="168" height="34" rx="7"/>
+            <rect x="14" y="96" width="168" height="34" rx="7"/>
+            <rect x="14" y="176" width="168" height="34" rx="7"/>
+            <rect x="14" y="216" width="168" height="34" rx="7"/>
+            <rect x="14" y="256" width="168" height="34" rx="7"/>
+            <rect x="14" y="296" width="168" height="34" rx="7"/>
+          </g>
+          <rect x="14" y="136" width="168" height="34" rx="7" fill="#1f6feb" opacity=".35"/>
+          <rect x="14" y="136" width="3" height="34" rx="1.5" fill="#2f81f7"/>
+          <g fill="#8b949e">
+            <rect x="26" y="68" width="76" height="6" rx="3"/>
+            <rect x="26" y="108" width="96" height="6" rx="3"/>
+            <rect x="26" y="188" width="66" height="6" rx="3"/>
+            <rect x="26" y="228" width="88" height="6" rx="3"/>
+            <rect x="26" y="268" width="72" height="6" rx="3"/>
+            <rect x="26" y="308" width="94" height="6" rx="3"/>
+          </g>
+          <rect x="26" y="148" width="102" height="7" rx="3.5" fill="#e6edf3"/>
+          <!-- área de vídeo -->
+          <rect x="196" y="0" width="444" height="316" fill="#05070a"/>
+          <g opacity=".55">
+            <circle cx="418" cy="150" r="70" fill="none" stroke="#2f81f7" stroke-width="1.2" opacity=".35"/>
+            <circle cx="418" cy="150" r="46" fill="none" stroke="#2f81f7" stroke-width="1.2" opacity=".5"/>
+          </g>
+          <path d="M406 134l30 16-30 16z" fill="#e6edf3" opacity=".85"/>
+          <!-- rótulo -->
+          <rect x="220" y="246" width="240" height="9" rx="4.5" fill="#e6edf3" opacity=".9"/>
+          <rect x="220" y="264" width="150" height="7" rx="3.5" fill="#8b949e"/>
+          <rect x="220" y="284" width="300" height="4" rx="2" fill="#2a323d"/>
+          <rect x="220" y="284" width="128" height="4" rx="2" fill="#2f81f7"/>
+          <!-- barra de transporte -->
+          <rect x="196" y="316" width="444" height="64" fill="#161b22"/>
+          <g fill="#39414d">
+            <circle cx="234" cy="348" r="12"/><circle cx="272" cy="348" r="12"/><circle cx="310" cy="348" r="12"/>
+          </g>
+          <circle cx="234" cy="348" r="12" fill="#2f81f7"/>
+          <rect x="352" y="344" width="120" height="7" rx="3.5" fill="#2a323d"/>
+          <rect x="352" y="344" width="64" height="7" rx="3.5" fill="#8b949e"/>
+          <g fill="#39414d">
+            <rect x="502" y="338" width="22" height="20" rx="5"/>
+            <rect x="534" y="338" width="22" height="20" rx="5"/>
+            <rect x="566" y="338" width="22" height="20" rx="5"/>
+            <rect x="598" y="338" width="22" height="20" rx="5"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================= sistema ====== -->
+<section class="section" id="sistema">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="system.eyebrow">Un sistema, tres piezas</span>
+      <h2 data-i18n="system.title">Cada pantalla hace lo que sabe hacer</h2>
+      <p class="lead" data-i18n="system.lead">Las tres aplicaciones comparten el mismo analizador de listas, la misma guía y la misma paleta. Puedes usar solo una, o las tres a la vez.</p>
+    </div>
+
+    <div class="grid grid--3">
+      <article class="card platform-card reveal">
+        <span class="platform-card__tag">Windows 10 / 11</span>
+        <div class="card__icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 5.6l7.6-1.05v7.3H3zM3 18.4l7.6 1.05v-7.2H3zm8.6 1.19L21 21V12.85h-9.4zM11.6 4.4v7.45H21V3z"/></svg>
+        </div>
+        <h3 data-i18n="system.desktop.title">IPTV Desktop</h3>
+        <p data-i18n="system.desktop.text">El reproductor completo. LibVLC empaquetado, parrilla de programación, grabación, favoritos ordenables y servidor de control remoto.</p>
+        <ul>
+          <li data-i18n="system.desktop.b1">LibVLC 3.0.23 incluido: no hace falta instalar VLC</li>
+          <li data-i18n="system.desktop.b2">Sintonización: prueba canal por canal y propone borrar los caídos</li>
+          <li data-i18n="system.desktop.b3">Grabación, capturas y biblioteca de enlaces guardados</li>
+        </ul>
+        <a class="btn btn--primary" href="downloads/IPTV-Desktop-Setup-1.0.0.exe" download data-i18n="system.desktop.cta">Descargar instalador</a>
+      </article>
+
+      <article class="card platform-card reveal">
+        <span class="platform-card__tag platform-card__tag--new" data-i18n="system.tv.tag">Nuevo · Android TV 8+</span>
+        <div class="card__icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 3H3a2 2 0 00-2 2v11a2 2 0 002 2h6v2H7v2h10v-2h-2v-2h6a2 2 0 002-2V5a2 2 0 00-2-2zm0 13H3V5h18z"/></svg>
+        </div>
+        <h3 data-i18n="system.tv.title">IPTV TV</h3>
+        <p data-i18n="system.tv.text">La versión para el televisor. Se maneja entera con la cruceta del mando, reproduce con ExoPlayer y trae la guía integrada.</p>
+        <ul>
+          <li data-i18n="system.tv.b1">Interfaz de diez pies: foco visible y tipografía grande</li>
+          <li data-i18n="system.tv.b2">Rótulo de canal con lo que emite ahora y lo que viene después</li>
+          <li data-i18n="system.tv.b3">Salto directo por número, favoritos y recientes</li>
+        </ul>
+        <a class="btn btn--primary" href="downloads/IPTV-TV-1.0.0.apk" download data-i18n="system.tv.cta">Descargar APK para TV</a>
+      </article>
+
+      <article class="card platform-card reveal">
+        <span class="platform-card__tag">Android 8+</span>
+        <div class="card__icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17 1.01L7 1a2 2 0 00-2 2v18a2 2 0 002 2h10a2 2 0 002-2V3a2 2 0 00-2-1.99zM17 19H7V5h10z"/></svg>
+        </div>
+        <h3 data-i18n="system.mobile.title">IPTV Remote</h3>
+        <p data-i18n="system.mobile.text">El mando a distancia. Se empareja escaneando un QR y controla el ordenador desde el sofá, por la red local.</p>
+        <ul>
+          <li data-i18n="system.mobile.b1">Emparejamiento por QR o manual, con reconexión automática</li>
+          <li data-i18n="system.mobile.b2">Catálogo con búsqueda, categorías y favoritos</li>
+          <li data-i18n="system.mobile.b3">Mando también desde la barra de notificaciones</li>
+        </ul>
+        <a class="btn btn--primary" href="downloads/IPTV-Remote-1.0.0.apk" download data-i18n="system.mobile.cta">Descargar APK del mando</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ====================================================== Google TV ===== -->
+<section class="section section--alt" id="tv">
+  <div class="container">
+    <div class="hero__grid">
+      <div class="reveal">
+        <span class="eyebrow" data-i18n="tv.eyebrow">Novedad de la versión 1.0</span>
+        <h2 data-i18n="tv.title">Ahora también en el televisor</h2>
+        <p class="lead" data-i18n="tv.lead">IPTV TV es una aplicación nativa de Android TV: aparece en la fila de aplicaciones de tu Google TV con su propio banner y se abre a pantalla completa. No es el reproductor del ordenador estirado, está pensada desde cero para una cruceta y para mirarse desde tres metros.</p>
+
+        <div class="keys" style="margin-top:26px">
+          <div class="key-row"><span class="kbd">▲ ▼ / CH+ CH−</span><span data-i18n="tv.key.channel">Canal siguiente y anterior, dentro de lo que estés viendo</span></div>
+          <div class="key-row"><span class="kbd">◀</span><span data-i18n="tv.key.left">Abre el catálogo sin tapar la imagen</span></div>
+          <div class="key-row"><span class="kbd">▶</span><span data-i18n="tv.key.right">Abre la guía de programación</span></div>
+          <div class="key-row"><span class="kbd">OK</span><span data-i18n="tv.key.ok">Enseña u oculta el rótulo del canal</span></div>
+          <div class="key-row"><span class="kbd">0 – 9</span><span data-i18n="tv.key.digits">Salto directo al número de canal</span></div>
+          <div class="key-row"><span class="kbd">MENU</span><span data-i18n="tv.key.menu">Ajustes: listas, guía, imagen e idioma</span></div>
+        </div>
+
+        <div class="hero__cta" style="margin-top:30px">
+          <a class="btn btn--primary" href="downloads/IPTV-TV-1.0.0.apk" download>
+            <span data-i18n="tv.cta">Descargar IPTV TV</span>
+            <span class="btn__meta">.apk · 3,5 MB</span>
+          </a>
+          <a class="btn btn--ghost" href="#instalacion" data-i18n="tv.cta2">Cómo se instala</a>
+        </div>
+      </div>
+
+      <!-- Ilustración de la pantalla del televisor -->
+      <div class="reveal">
+        <div class="tv-frame">
+          <div class="tv-frame__screen">
+            <svg viewBox="0 0 640 360" role="img" aria-label="Interfaz de IPTV TV en un televisor">
+              <rect width="640" height="360" fill="#05070a"/>
+              <g opacity=".5">
+                <circle cx="380" cy="140" r="86" fill="none" stroke="#2f81f7" stroke-width="1.3" opacity=".3"/>
+                <circle cx="380" cy="140" r="58" fill="none" stroke="#2f81f7" stroke-width="1.3" opacity=".45"/>
+              </g>
+              <path d="M366 122l32 18-32 18z" fill="#e6edf3" opacity=".8"/>
+
+              <!-- panel de canales -->
+              <rect x="0" y="0" width="216" height="360" fill="#0d1117" opacity=".93"/>
+              <g>
+                <rect x="20" y="22" width="62" height="22" rx="11" fill="#2f81f7" opacity=".3"/>
+                <rect x="88" y="22" width="58" height="22" rx="11" fill="#1c232d"/>
+                <rect x="152" y="22" width="46" height="22" rx="11" fill="#1c232d"/>
+              </g>
+              <g>
+                <rect x="20" y="58" width="60" height="20" rx="10" fill="#1c232d"/>
+                <rect x="86" y="58" width="66" height="20" rx="10" fill="#1c232d"/>
+              </g>
+              <g fill="#1c232d" opacity=".8">
+                <rect x="20" y="92" width="178" height="38" rx="8"/>
+                <rect x="20" y="176" width="178" height="38" rx="8"/>
+                <rect x="20" y="220" width="178" height="38" rx="8"/>
+                <rect x="20" y="264" width="178" height="38" rx="8"/>
+              </g>
+              <rect x="20" y="136" width="178" height="34" rx="8" fill="#2f81f7" opacity=".28"/>
+              <rect x="20" y="136" width="178" height="34" rx="8" fill="none" stroke="#ffffff" stroke-width="1.6"/>
+              <g fill="#8b949e">
+                <rect x="34" y="107" width="14" height="7" rx="3.5"/>
+                <rect x="60" y="105" width="112" height="9" rx="4.5" opacity=".6"/>
+                <rect x="34" y="191" width="14" height="7" rx="3.5"/>
+                <rect x="60" y="189" width="96" height="9" rx="4.5" opacity=".6"/>
+                <rect x="34" y="235" width="14" height="7" rx="3.5"/>
+                <rect x="60" y="233" width="118" height="9" rx="4.5" opacity=".6"/>
+                <rect x="34" y="279" width="14" height="7" rx="3.5"/>
+                <rect x="60" y="277" width="86" height="9" rx="4.5" opacity=".6"/>
+              </g>
+              <rect x="34" y="149" width="14" height="8" rx="4" fill="#2f81f7"/>
+              <rect x="60" y="148" width="104" height="10" rx="5" fill="#ffffff" opacity=".9"/>
+
+              <!-- rótulo de canal -->
+              <rect x="216" y="258" width="424" height="102" fill="#0d1117" opacity=".88"/>
+              <text x="248" y="304" font-family="system-ui, sans-serif" font-size="34" font-weight="700" fill="#2f81f7">07</text>
+              <rect x="304" y="278" width="176" height="12" rx="6" fill="#ffffff" opacity=".92"/>
+              <rect x="304" y="300" width="112" height="8" rx="4" fill="#8b949e"/>
+              <rect x="304" y="322" width="248" height="5" rx="2.5" fill="#2a323d"/>
+              <rect x="304" y="322" width="104" height="5" rx="2.5" fill="#2f81f7"/>
+              <rect x="500" y="272" width="66" height="20" rx="6" fill="#3fb950" opacity=".2"/>
+              <rect x="512" y="279" width="42" height="7" rx="3.5" fill="#3fb950"/>
+            </svg>
+          </div>
+        </div>
+        <div class="tv-frame__stand"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================== características === -->
+<section class="section" id="caracteristicas">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="features.eyebrow">Qué hace</span>
+      <h2 data-i18n="features.title">Lo que esperas de un reproductor IPTV, resuelto</h2>
+    </div>
+
+    <div class="grid grid--3">
+      <article class="card reveal">
+        <div class="card__icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg></div>
+        <h3 data-i18n="features.f1.title">Se pega y ya</h3>
+        <p data-i18n="features.f1.text">Reconoce solo listas M3U/M3U8, el texto de una lista pegado entero, canales sueltos, portales Xtream, guías XMLTV, acortadores y pastebin. No hay que elegir el tipo antes.</p>
+      </article>
+      <article class="card reveal">
+        <div class="card__icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17 10.5V7a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h12a1 1 0 001-1v-3.5l4 4v-11z"/></svg></div>
+        <h3 data-i18n="features.f2.title">Xtream Codes completo</h3>
+        <p data-i18n="features.f2.text">TV en directo, películas y series con sus categorías resueltas, y la guía que publica el propio servidor. Basta el servidor, el usuario y la clave.</p>
+      </article>
+      <article class="card reveal">
+        <div class="card__icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 2h10a2 2 0 012 2v16a2 2 0 01-2 2H7a2 2 0 01-2-2V4a2 2 0 012-2zm2 4v2h6V6zm0 4v2h6v-2zm0 4v2h4v-2z"/></svg></div>
+        <h3 data-i18n="features.f3.title">Guía XMLTV de verdad</h3>
+        <p data-i18n="features.f3.text">Guías comprimidas en .gz y .zip, de cientos de miles de programas, analizadas de forma incremental. Ahora, a continuación y parrilla del día.</p>
+      </article>
+      <article class="card reveal">
+        <div class="card__icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7.5-4.7-9.3-9.2A5.4 5.4 0 0112 6.2a5.4 5.4 0 019.3 5.6C19.5 16.3 12 21 12 21z"/></svg></div>
+        <h3 data-i18n="features.f4.title">Favoritos e historial</h3>
+        <p data-i18n="features.f4.text">Los favoritos sobreviven a una resincronización de la lista, aunque cambien las posiciones. En el escritorio, además, se pueden ordenar arrastrando.</p>
+      </article>
+      <article class="card reveal">
+        <div class="card__icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 15h-2v-2h2zm0-4h-2V7h2z"/></svg></div>
+        <h3 data-i18n="features.f5.title">Cuando algo falla, lo dice</h3>
+        <p data-i18n="features.f5.text">Un canal caído no se queda en negro sin explicación: aparece el motivo concreto y un botón para reintentar. Un flujo que se congela se detecta y se vuelve a abrir solo.</p>
+      </article>
+      <article class="card reveal">
+        <div class="card__icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm6.9 9h-3a15.4 15.4 0 00-1.3-5.4A8 8 0 0118.9 11zM12 4.2c.8 1.2 1.5 3.1 1.7 6.8h-3.4c.2-3.7.9-5.6 1.7-6.8zM4.3 13h3c.1 2.1.6 4 1.3 5.4A8 8 0 014.3 13zm3-2h-3a8 8 0 014.3-5.4A15.4 15.4 0 007.3 11zM12 19.8c-.8-1.2-1.5-3.1-1.7-6.8h3.4c-.2 3.7-.9 5.6-1.7 6.8zm2.6-1.4c.7-1.4 1.2-3.3 1.3-5.4h3a8 8 0 01-4.3 5.4z"/></svg></div>
+        <h3 data-i18n="features.f6.title">Bilingüe, sin reinstalar</h3>
+        <p data-i18n="features.f6.text">Español e inglés en las tres aplicaciones, con cambio en caliente desde los ajustes. No depende del idioma del sistema.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ====================================================== descargas ===== -->
+<section class="section section--alt" id="descargas">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="downloads.eyebrow">Descargas</span>
+      <h2 data-i18n="downloads.title">Versión 1.0.0</h2>
+      <p class="lead" data-i18n="downloads.lead">Descarga directa. Comprueba la huella SHA-256 si quieres asegurarte de que el archivo es el que se publicó aquí.</p>
+    </div>
+
+    <table class="download-table reveal">
+      <thead>
+        <tr>
+          <th data-i18n="downloads.th.file">Archivo</th>
+          <th data-i18n="downloads.th.req">Requisitos</th>
+          <th data-i18n="downloads.th.size">Tamaño</th>
+          <th data-i18n="downloads.th.hash">SHA-256</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr data-file="IPTV-Desktop-Setup-1.0.0.exe">
+          <td>
+            <div class="file-name">
+              <span>IPTV Desktop
+                <small>IPTV-Desktop-Setup-1.0.0.exe</small>
+              </span>
+            </div>
+          </td>
+          <td class="muted small">Windows 10 / 11 (x64)</td>
+          <td class="muted small size">59,2 MB</td>
+          <td class="hash">000a9c28c4ed4a1192e68da5c4ad9ecf688754a67cc5352d542054cc60a86c2b</td>
+          <td><a class="btn btn--primary btn--sm" href="downloads/IPTV-Desktop-Setup-1.0.0.exe" download data-i18n="downloads.get">Descargar</a></td>
+        </tr>
+        <tr data-file="IPTV-TV-1.0.0.apk">
+          <td>
+            <div class="file-name">
+              <span>IPTV TV
+                <small>IPTV-TV-1.0.0.apk</small>
+              </span>
+            </div>
+          </td>
+          <td class="muted small">Android TV / Google TV 8.0+</td>
+          <td class="muted small size">3,5 MB</td>
+          <td class="hash">cea8bd8e7bdec6ef889ea4c92b5ce9ab3e82af4ce3b6ca0fe07dcd2311ce5590</td>
+          <td><a class="btn btn--primary btn--sm" href="downloads/IPTV-TV-1.0.0.apk" download data-i18n="downloads.get">Descargar</a></td>
+        </tr>
+        <tr data-file="IPTV-Remote-1.0.0.apk">
+          <td>
+            <div class="file-name">
+              <span>IPTV Remote
+                <small>IPTV-Remote-1.0.0.apk</small>
+              </span>
+            </div>
+          </td>
+          <td class="muted small">Android 8.0+</td>
+          <td class="muted small size">23,9 MB</td>
+          <td class="hash">c9d5198c11b55fa249c63f72c82b5661cb2c604184aa819f4060c73f9ef668f3</td>
+          <td><a class="btn btn--primary btn--sm" href="downloads/IPTV-Remote-1.0.0.apk" download data-i18n="downloads.get">Descargar</a></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p class="small muted reveal" style="margin-top:16px" data-i18n="downloads.verify">Para comprobar la huella en Windows: <code>certutil -hashfile IPTV-TV-1.0.0.apk SHA256</code></p>
+  </div>
+</section>
+
+<!-- ==================================================== instalación ===== -->
+<section class="section" id="instalacion">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="install.eyebrow">Instalación</span>
+      <h2 data-i18n="install.title">Cómo poner cada pieza en marcha</h2>
+    </div>
+
+    <div class="grid grid--2">
+      <div class="reveal">
+        <h3 style="margin-bottom:16px" data-i18n="install.tv.title">En un televisor con Google TV</h3>
+        <div class="steps">
+          <div class="step"><p data-i18n-html="install.tv.s1"><strong>Permite instalar aplicaciones desconocidas.</strong> En el televisor: Ajustes → Sistema → Información → pulsa siete veces en «Compilación» para activar el modo desarrollador, y luego Ajustes → Aplicaciones → Seguridad y restricciones → Fuentes desconocidas.</p></div>
+          <div class="step"><p data-i18n-html="install.tv.s2"><strong>Lleva el APK al televisor.</strong> Con un pendrive USB, con una aplicación de descarga como <em>Downloader</em> apuntando a la dirección de este archivo, o desde el ordenador con <code>adb install IPTV-TV-1.0.0.apk</code>.</p></div>
+          <div class="step"><p data-i18n-html="install.tv.s3"><strong>Ábrelo desde la fila de aplicaciones.</strong> IPTV TV aparece con su propio banner. En el primer arranque ofrece varias listas ya preparadas: marca las que quieras o añade la tuya.</p></div>
+          <div class="step"><p data-i18n-html="install.tv.s4"><strong>Añade tu lista.</strong> MENU → Añadir lista, y pega la dirección M3U o el portal Xtream. La aplicación reconoce sola de qué se trata.</p></div>
+        </div>
+      </div>
+
+      <div class="reveal">
+        <h3 style="margin-bottom:16px" data-i18n="install.pc.title">En Windows y en el móvil</h3>
+        <div class="steps">
+          <div class="step"><p data-i18n-html="install.pc.s1"><strong>Ejecuta el instalador.</strong> El <code>.exe</code> está firmado con un certificado propio, así que Windows puede avisar: pulsa «Más información» → «Ejecutar de todas formas». Instala LibVLC incluido y crea la regla de firewall.</p></div>
+          <div class="step"><p data-i18n-html="install.pc.s2"><strong>Elige tus listas.</strong> En el primer arranque el asistente ofrece varias ya preparadas. Después puedes pegar la tuya en Preferencias → Listas.</p></div>
+          <div class="step"><p data-i18n-html="install.pc.s3"><strong>Instala el mando en el móvil.</strong> Abre el <code>.apk</code> y permite la instalación desde tu navegador o gestor de archivos cuando Android lo pida.</p></div>
+          <div class="step"><p data-i18n-html="install.pc.s4"><strong>Empareja por QR.</strong> En el escritorio: menú Mando → Mostrar QR. Escanéalo con el móvil y ya está: los dos tienen que estar en la misma red Wi-Fi.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================= faq ==== -->
+<section class="section section--alt" id="faq">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="faq.eyebrow">Preguntas frecuentes</span>
+      <h2 data-i18n="faq.title">Antes de descargar</h2>
+    </div>
+
+    <div class="faq reveal">
+      <details open>
+        <summary data-i18n="faq.q1">¿Incluye canales o listas de pago?</summary>
+        <p data-i18n="faq.a1">No. Es un reproductor, igual que lo es VLC. No incluye ni distribuye ningún contenido audiovisual. Las listas, las guías y las credenciales las aporta el usuario, que es el único responsable de disponer de los derechos necesarios para acceder a ellas. Las listas públicas que se ofrecen en el primer arranque son catálogos de terceros que puedes desmarcar o borrar.</p>
+      </details>
+      <details>
+        <summary data-i18n="faq.q2">¿Necesito el ordenador para usar la aplicación del televisor?</summary>
+        <p data-i18n="faq.a2">No. IPTV TV es independiente: descarga y reproduce las listas por su cuenta. El mando Android, en cambio, sí controla el reproductor de Windows, que es su razón de ser.</p>
+      </details>
+      <details>
+        <summary data-i18n="faq.q3">¿Por qué el APK de televisor no está en Google Play?</summary>
+        <p data-i18n="faq.a3">Se distribuye por descarga directa. Un televisor con Google TV admite instalar aplicaciones desde fuera de la tienda activando las fuentes desconocidas; en la sección de instalación están los pasos.</p>
+      </details>
+      <details>
+        <summary data-i18n="faq.q4">¿Envía datos a algún sitio?</summary>
+        <p data-i18n="faq.a4">No hay telemetría, ni cuentas, ni publicidad. Las únicas conexiones que abren las aplicaciones son a los servidores de las listas y guías que tú das de alta, y —en el caso del mando— al ordenador de tu propia red local.</p>
+      </details>
+      <details>
+        <summary data-i18n="faq.q5">¿Hace falta instalar VLC en el ordenador?</summary>
+        <p data-i18n="faq.a5">No. El instalador de Windows lleva LibVLC 3.0.23 dentro, en la versión de 64 bits que necesita. La aplicación del televisor no usa LibVLC: reproduce con ExoPlayer, que es el motor con aceleración por hardware de Android.</p>
+      </details>
+      <details>
+        <summary data-i18n="faq.q6">¿Qué pasa si un canal no se ve?</summary>
+        <p data-i18n="faq.a6">La mayoría de las veces el servidor de ese canal ha dejado de responder, cosa habitual en las listas públicas. Las tres aplicaciones dicen el motivo concreto en pantalla, y el escritorio incluye una sintonización que prueba la lista entera y propone borrar los caídos.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ========================================================== aviso ===== -->
+<section class="section section--tight">
+  <div class="container">
+    <div class="notice reveal">
+      <h3 data-i18n="legal.title">Aviso importante</h3>
+      <p data-i18n="legal.text">IPTV System es un reproductor multimedia. No incluye, aloja ni distribuye ningún contenido audiovisual, y no facilita el acceso a fuentes concretas más allá de reproducir las direcciones que el usuario introduce. El usuario es el único responsable de disponer de los derechos necesarios para acceder a los contenidos que reproduzca. El software incorpora LibVLC (LGPL/GPL), PyQt6 (GPL v3), Media3 / ExoPlayer y otros componentes bajo Apache 2.0; sus licencias prevalecen en lo que a ellos respecta.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <div>
+      <strong style="color:var(--text)">IPTV System</strong> · 1.0.0 ·
+      <span data-i18n="footer.tag">Reproductor para Windows, Android y Google TV</span>
+    </div>
+    <div class="footer__links">
+      <a href="#descargas" data-i18n="footer.downloads">Descargas</a>
+      <a href="#instalacion" data-i18n="footer.install">Instalación</a>
+      <a href="#faq" data-i18n="footer.faq">Preguntas</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
