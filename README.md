@@ -32,7 +32,7 @@ HTML + CSS + JavaScript sin dependencias · bilingüe ES/EN · tema oscuro
 | Archivo | Plataforma |
 |---|---|
 | `IPTV-Desktop-Setup-1.0.0.exe` | Windows 10/11 (64 bits) |
-| `IPTV-TV-1.0.0.apk` | Android TV / Google TV 8.0+ |
+| `IPTV-TV-1.0.1.apk` | Android TV / Google TV 8.0+ |
 | `IPTV-Remote-1.0.0.apk` | Android 8.0+ |
 
 ## Actualizar los instaladores
